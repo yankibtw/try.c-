@@ -3,9 +3,9 @@
 # Параметры по умолчанию
 BUILD_DIR 	= build       # Каталог для файлов сборки
 BUILD_TYPE 	= Debug       # Тип сборки: Debug или Release
-GENERATOR 	= Ninja       # Генератор сборки: Ninja или Unix Makefiles
+GENERATOR 	= Ninja       # Генератор сборки: Ninja или "Unix Makefiles"
 LIB_TYPE 	= STATIC      # Тип библиотеки по умолчанию (STATIC или SHARED)
-POINT_TYPE 	= short       # Тип точности для решения квадратного уравнения
+POINT_TYPE 	= short       # Тип точности для решения квадратного уравнения (long=double, short=float)
 
 
 all: configure build_all
@@ -40,3 +40,8 @@ static:
 
 shared:
 	make LIB_TYPE=SHARED all
+
+
+fix_problem:
+	sudo apt update
+	sudo apt install ninja-build
