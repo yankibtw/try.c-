@@ -12,7 +12,7 @@ RowMatrix::RowMatrix (double *array, size_t size):
 
 const double & RowMatrix::operator[] (size_t j) const {
     if (j >= _size) {
-        throw std::out_of_range("");
+        throw std::out_of_range("Errroe");
     }
     return _array[j];
 }
