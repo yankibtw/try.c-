@@ -68,7 +68,7 @@ const RowMatrix Matrix::operator[] (size_t row_num) const {
 
 RowMatrix Matrix::operator[] (size_t row_num) {
     if (row_num >= _rows) {
-        throw std::out_of_range("");
+        throw std::out_of_range("Ex");
     }
     return RowMatrix(_array + row_num * _cols, _cols);
 }
